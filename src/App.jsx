@@ -1,38 +1,42 @@
-import "./App.css"
-import { useState } from "react"
-import PokemonCard from "./components/PokemonCard"
-import Navbar from "./components/NavBar"
+import React, { useEffect, useState } from 'react';
+import './App.css'; 
+import PokemonCard from './components/PokemonCard';
+import Navbar from './components/NavBar'; 
 
 function App() {
-  const [pokemonIndex, setPokemonIndex] = useState(0)
+  const [pokemonIndex, setPokemonIndex] = useState(0);
 
   const pokemonList = [
     {
-      name: "bulbasaur",
+      name: 'bulbasaur',
       imgSrc:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png',
     },
     {
-      name: "charmander",
+      name: 'charmander',
       imgSrc:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png',
     },
     {
-      name: "squirtle",
+      name: 'squirtle',
       imgSrc:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png',
     },
     {
-      name: "pikachu",
+      name: 'pikachu',
       imgSrc:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png',
     },
     {
-      name: "mew",
+      name: 'mew',
     },
-  ]
+  ];
 
-  console.log(pokemonIndex)
+  useEffect(() => {
+    alert('hello pokemon trainer :)');
+  }, []);
+
+  console.log(pokemonIndex);
   return (
     <>
       <Navbar
@@ -42,7 +46,7 @@ function App() {
       />
       <PokemonCard pokemon={pokemonList[pokemonIndex]} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
